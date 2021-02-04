@@ -1,0 +1,6 @@
+How to change Immutable variable like Boolean without changing reference to this object
+
+Field field = Boolean.class.getDeclaredField("value");
+field.setAccessible(true);
+Boolean mutableBoolean = true;
+field.setBoolean(mutableBoolean, false);
