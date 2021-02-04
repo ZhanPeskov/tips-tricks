@@ -1,0 +1,11 @@
+Accumulating conditions for a delayed call
+
+List<Integer> singleDigits = new ArrayList<>(10);
+
+Consumer<Void> consumer = dummy -> {};
+for (int i = 0; i < 10; i++) {
+     int finalI = i;
+     consumer = consumer.andThen(dummy -> singleDigits.add(finalI));
+}
+
+consumer.accept(null);
