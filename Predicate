@@ -1,0 +1,11 @@
+Accumulating conditions for a delayed call
+
+List<Integer> singleDigits = new ArrayList<>(10);
+
+Predicate<Boolean> predicate = b -> true;
+for (int i = 0; i < 10; i++) {
+     int finalI = i;
+     predicate = predicate.and(b -> singleDigits.add(finalI));
+}
+
+Boolean result = predicate.test(true);
