@@ -1,0 +1,3 @@
+sumOfPositiveIntegers = (n * (n + 1)) / 2
+
+sumOfIntegers = (start + finish) * (Math.abs(start - finish) + 1) / 2
